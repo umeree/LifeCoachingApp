@@ -5,12 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "CPH1933 (mobile)",
+            "name": "My Mobile",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": " Android 14 (API 34) (emulator)",
+            "name": "Emulator",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"

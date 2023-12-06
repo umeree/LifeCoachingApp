@@ -19,6 +19,22 @@ class ResponsiveWidget {
 class OnBoarding1 extends StatelessWidget {
   const OnBoarding1({Key? key});
 
+  Widget targetImage() {
+    return Image(image: AssetImage("assets/images/Target_icon.png"));
+  }
+
+  Widget IllustrationImage() {
+    return Image(image: AssetImage("assets/images/Illustration.png"));
+  }
+
+  Widget Illustration2Image() {
+    return Image(image: AssetImage("assets/images/Illustration 2@2x.png"));
+  }
+
+  Widget Illustration3Image() {
+    return Image(image: AssetImage("assets/images/Illustration 3@2x-1.png"));
+  }
+
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -55,36 +71,31 @@ class OnBoarding1 extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(100),
                     ),
-                    child: const Image(
-                      image: AssetImage("assets/images/Illustration.png"),
-                      // fit: BoxFit.contain,
-                    ),
+                    child: IllustrationImage(),
+                  ),
+                ),
+              ),
+              ConstrainedBox(
+                constraints: (BoxConstraints(maxWidth: 200)),
+                child: Text(
+                  "Welcome!",
+                  style: TextStyle(
+                    fontSize: fontsize,
+                    fontWeight: FontWeight.w700,
                   ),
                 ),
               ),
               ConstrainedBox(
                 constraints: (BoxConstraints(minHeight: 90, maxWidth: 200)),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Welcome!",
-                      style: TextStyle(
-                          fontSize: fontsize,
-                          fontWeight: FontWeight.w700,
-                          height: 1.5),
-                    ),
-                    Text("Life Coaching is all about changing your life.",
-                        style: TextStyle(
-                            fontSize: fontsize,
-                            fontWeight: FontWeight.w700,
-                            height: 1.5))
-                  ],
-                ),
+                child: Text("Life Coaching is all about changing your life.",
+                    style: TextStyle(
+                        fontSize: fontsize,
+                        fontWeight: FontWeight.w700,
+                        height: 1.5)),
               ),
-              Image(image: AssetImage("assets/images/Target_icon.png")),
+              targetImage(),
               ConstrainedBox(
-                constraints: (BoxConstraints(minHeight: 90, maxWidth: 300)),
+                constraints: (BoxConstraints(maxHeight: 130, maxWidth: 300)),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
