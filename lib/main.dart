@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lifecoaching/screens/OnBoarding1.dart';
+import 'package:lifecoaching/screens/SplashScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: AppBarTheme(iconTheme: IconThemeData(color: Colors.black)),
         useMaterial3: true,
       ),
-      home: OnBoarding1(),
+      home: SplashScreen(),
     );
   }
 }
